@@ -124,6 +124,7 @@ nav {
 
 .hero-intro p {
   padding: 5rem 10rem;
+  color: var(--gray-text);
 }
 
 .hero-intro h2 {
@@ -167,7 +168,7 @@ nav {
   left: 45%;
 }
 
-/*ANIMATION*/
+/*ANIMATIONS*/
 
 @keyframes opening {
   from {
@@ -193,5 +194,16 @@ nav {
   }
   to {
     transform: rotateZ(-0deg);
+  }
+}
+
+/*MEDIA*/
+
+@media screen and (max-width: 842px) {
+  .hero {
+    width: 100%;
+  }
+  .hero-intro p {
+    padding: 5rem 3rem;
   }
 }
