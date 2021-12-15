@@ -25,6 +25,7 @@ html {
   --header2: calc(3.5rem + 1vw);
   --header3: calc(3rem + 1vw);
   --header4: calc(2.4rem + 1vw);
+  --header5: calc(1.4rem + 1vw);
   --text: calc(1.5rem + 1vw);
   --big: calc(6rem + 1vw);
   --special-color: #906272;
@@ -334,6 +335,28 @@ nav {
   margin-bottom: 3rem;
 }
 
+/*FOOTER*/
+
+footer {
+  background: var(--background-color);
+  display: flex;
+  padding: 3rem 5%;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.footer-head {
+  flex: 3 1 40rem;
+  font-size: calc(1.2rem + 1vw);
+}
+
+footer ul {
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /*MEDIA*/
 
 @media screen and (max-width: 842px) {
@@ -431,5 +454,17 @@ nav {
 
   .contact img {
     display: none;
+  }
+
+  /*FOOTER*/
+
+  .footer-head {
+    order: 2;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .footer ul {
+    order: 1;
   }
 }
