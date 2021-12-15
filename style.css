@@ -31,6 +31,7 @@ html {
   --special-color: #906272;
   --background-color: #414141;
   --gray-text: #525252;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -137,6 +138,7 @@ nav {
   padding: 2rem 8rem;
   border: 3px solid black;
   margin-bottom: 4rem;
+  font-weight: bold;
 }
 
 .hero-images {
@@ -360,6 +362,10 @@ footer ul {
 /*MEDIA*/
 
 @media screen and (max-width: 842px) {
+  .html {
+    scroll-behavior: smooth;
+  }
+
   .hero {
     width: 100%;
   }
@@ -400,36 +406,24 @@ footer ul {
     align-items: center;
   }
 
-  .menu-check {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(5%, -50%);
-    width: 5rem;
-    height: 5rem;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 100;
+  .nav-open {
+    transform: translateX(-100%);
   }
-  .menu-check:checked + .nav-links {
-    transform: translate(-100%);
-  }
-  .menu-check:checked ~ .burger span {
+
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
     background: white;
   }
 
-  .menu-check:checked ~ .burger span:nth-child(1) {
-    transform: rotateZ(45deg) translateY(300%);
-  }
-
-  .menu-check:checked ~ .burger span:nth-child(2) {
+  .toggle .line2 {
     opacity: 0;
   }
 
-  .menu-check:checked ~ .burger span:nth-child(3) {
+  .toggle .line3 {
     transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
   }
+
   /*ABOUT SECTION*/
   .about-text div {
     padding: 3rem 3rem;
@@ -466,5 +460,17 @@ footer ul {
 
   .footer ul {
     order: 1;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  html {
+    --header1: 3rem;
+    --header2: 5rem;
+    --header3: 4rem;
+    --header4: 3rem;
+    --header5: 3rem;
+    --text: 3rem;
+    --big: 8rem;
   }
 }
